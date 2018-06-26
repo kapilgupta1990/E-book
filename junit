@@ -1,1 +1,4 @@
 
+If you are using the Maven build system, you should use the "Test" suffix for test classes.
+The Maven build system (via its surfire plug-in) automatically includes such classes in its test scope.
+
