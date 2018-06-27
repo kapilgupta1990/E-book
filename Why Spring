@@ -27,7 +27,8 @@ works with JSON resource representations. Additionally, you want to apply declar
 validation per the JSR-303 specification and serve the application using an embedded
 Tomcat server. To accomplish all of this, you’ll need
 
-3. Spring CLI 
+3. Spring CLI
+https://www.journaldev.com/8195/spring-boot-cli-setup-and-helloworld-example
 
 4.THE ACTUATOR :The final piece of the Spring Boot puzzle is the Actuator. Where the other parts of
 Spring Boot simplify Spring development, the Actuator instead offers the ability to
