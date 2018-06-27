@@ -1,0 +1,16 @@
+5 reasons:
+
+1. Automatic conversion from Object to Tuple and vice versa
+In simple JDBC -> what you do -> you query to a table -> You get the result set -> then you map it to corresponsing object
+Same case while persist : -> Object -> SQL Map ->  then save
+Hibernate saves this time to automatically conversion of object to tuple and tuple to object.
+
+2. Simple JDBC : queries are database depedent , using Hibernate queries are database indepedent.
+
+3. Automatic schema creation for you, you write the class , map it into hibernate.cfg.xml
+
+4. Support of caching (In database you have to write your own code for cachinh)
+
+5. Development time very less
+
+
