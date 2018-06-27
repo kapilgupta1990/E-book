@@ -8,3 +8,36 @@ For eg:
 
 
 Why Spring boot:
+1. Automatic Configuration: Spring Boot can automatically configure these common configuration scenarios. If
+Spring Boot detects that you have the H2 database library in your application’s classpath,
+it will automatically configure an embedded H2 database. If JdbcTemplate is in
+the classpath, then it will also configure a JdbcTemplate bean for you. There’s no
+need for you to worry about configuring those beans. They’ll be configured for you,
+ready to inject into any of the beans you write.
+
+2. STARTER DEPENDENCIES :It can be challenging to add dependencies to a project’s build. What library do you
+need? What are its group and artifact? Which version do you need? Will that version
+play well with other dependencies in the same project?
+Spring Boot offers help with project dependency management by way of starter
+dependencies. Starter dependencies are really just special Maven (and Gradle) dependencies
+that take advantage of transitive dependency resolution to aggregate commonly
+used libraries under a handful of feature-defined dependencies.
+For example, suppose that you’re going to build a REST API with Spring MVC that
+works with JSON resource representations. Additionally, you want to apply declarative
+validation per the JSR-303 specification and serve the application using an embedded
+Tomcat server. To accomplish all of this, you’ll need
+
+3. Spring CLI 
+
+4.THE ACTUATOR :The final piece of the Spring Boot puzzle is the Actuator. Where the other parts of
+Spring Boot simplify Spring development, the Actuator instead offers the ability to
+inspect the internals of your application at runtime. With the Actuator installed, you
+can inspect the inner workings of your application, including details such asSpring rebooted 7
+■ What beans have been configured in the Spring application context
+■ What decisions were made by Spring Boot’s auto-configuration
+■ What environment variables, system properties, configuration properties, and
+command-line arguments are available to your application
+■ The current state of the threads in and supporting your application
+■ A trace of recent HTTP requests handled by your application
+■ Various metrics pertaining to memory usage, garbage collection, web requests,
+and data source usage
