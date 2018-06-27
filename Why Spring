@@ -1,0 +1,10 @@
+Spring provides a way by which you can develop code with less efforts ans less time , hiding the complexity behind.
+For eg:
+1. SPring IOC Container
+2. Support of AOP: Spring AOP has been designed to make it able to work with cross-cutting concerns inside the Spring Framework. Any object which is created and configured by the container can be enriched using Spring AOP.
+3.Transaction Management
+4. Data access framework
+5. Spring Integration
+
+
+Why Spring boot:
