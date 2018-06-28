@@ -15,3 +15,6 @@
 @ContextConfiguration(classes = Application.class) // Can be used in simple spring
 
 @ContextConfiguration is an annotation from the Spring Test Framework, which is suitable for every Spring application, @SpringApplicationConfiguration is from Spring Boot and is actually a composite annotation, which includes ContextConfiguration with the custom SpringApplicationContextLoader as loader.
+
+
+SpringJUnit4ClassRunner and springRunner both are same thing. We can use either of them. It is just a shorter form of that.
