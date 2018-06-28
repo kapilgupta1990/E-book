@@ -1,0 +1,71 @@
+Spring dependency Injection v/s Autowiring :
+
+1. Depedendency Injection and Inversion of control are same things.
+
+Dependency Injection : It is a way by which you can outsource the task of creating dependency to some 3rd party tool.
+
+Why Dependency Injection:
+"Any nontrivial application is made up of two or more classes that collaborate with each other to perform some business logic. Traditionally, each object is responsible for obtaining its own references to the objects it collaborates with (its dependencies). When applying DI, the objects are given their dependencies at creation time by some external entity that coordinates each object in the system. In other words, dependencies are injected into objects."
+
+I find that very clear.
+
+Dependency Injection was originally called Inversion of Control (IoC) because the normal control sequence would be the object finds the objects it depends on by itself and then calls them. Here, this is reversed: 
+The dependencies are handed to the object when it's created. This also illustrates the Hollywood Principle at work: Don't call around for your dependencies, we'll give them to you when we need you.
+
+
+If you don't use DI, you're probably wondering why it's a big deal. It delivers a key advantage: loose coupling. 
+Objects can be added and tested independently of other objects, because they don't depend on anything other than what you pass them. When using traditional dependencies, to test an object you have to create an environment where all of its dependencies exist and are reachable before you can test it. With DI, it's possible to test the object in isolation passing it mock objects for the ones you don't want or need to create. Likewise, adding a class to a project is facilitated because the class is self-contained, so this avoids the "big hairball" that large projects often evolve into.
+
+The challenge of DI is writing an entire application using it. A few classes are no big deal, but a whole app is much more difficult. For entire applications, you frequently want a framework to manage the dependencies and the interactions between objects. DI frameworks are often driven by XML files that help specify what to pass to whom and when. Spring is a full-service Java DI framework; other lighter DI frameworks include NanoContainer and the even more lightweight PicoContainer .
+
+
+
+Dependency Injection types:
+
+You can provide depedency of one class to another class in following ways.
+--   Constructor based dependency Injection (inter bean reference)
+
+public class College {
+
+	private String collegeName;
+	private Student student;
+	
+	public College(Student student){
+		this.student=student;
+	}
+}
+
+public class Student {
+
+	private int id;
+	private String student;
+}
+
+@Scope(value="singleton")
+	@Bean
+	College college(){
+		return new College(student());
+		
+	}
+	
+	@Bean
+	@Scope(value="singleton")
+	Student student(){
+		return new Student();
+	}
+
+--   Seter based dependency Injection
+
+As you do it inside xml file using : constructor-arg and property
+As you do it inside configuration using bean:
+
+
+Autowiring :
+Following are the autowiring modes, which can be used to instruct the Spring container to use autowiring for dependency injection. You use the autowire attribute of the <bean/> element to specify autowire mode for a bean definition.
+-> no autowiring
+- > by Name
+-> by Type
+-> constructor
+-> autodetect : first by constructor , if can not resolve then by Type
+
+In DI we are saying spring to use these dependency , but in case of autowiring spring is automatically handling dependency on behalf of you.
