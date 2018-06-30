@@ -1,0 +1,26 @@
+JMS (Java messaging service ) v/s AMQP(Advanced messaging queue protocol)
+
+1. JMS was originally designed to for delivering message from one java application to another java application, whereac AMQP 
+was designed for cross platform message transfer (Like from Java to Ruby)
+
+2. As JMS API was developed by java community , keeping in mind how two java application can communicate. There are 
+  multiple vendors that implement this JMS API.
+   Couple for Vendors:
+     -- Active MQ, Hornet MQ and SOnic MQ
+     
+ 3. There are 5 message types supported by JMS (Object, Map , Byte , Text , Stream) while AMQP only supports Byte message Type.
+ 
+ 4. Using AMQP it is possible to send message between Java and Ruby.
+ 
+ 5. In JMS you send message directly to either to topic/queue but in case of AMQP client sends a message to exchange, and it is 
+ the responsiblity of client in AMQP to bind that queue with exchange.
+
+
+AMQP Implementaion:
+Rabbit MQ and Apache Qpid
+
+ More information can be found out here.
+
+http://www.wmrichards.com/amqp.pdf
+ 
+     
