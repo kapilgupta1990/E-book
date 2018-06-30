@@ -1,3 +1,13 @@
+Java 7:
+1. Catching multiple exception inside single catch block and rethrowing it
+2. Automatic resource management in try statement
+3. STrings in switch statement
+4. Allowing underscore in numeric literals
+5. Time sort is used to sort collections and arrays instead of merge sort.
+
+        Time sort= Merge sort + Insertion sort
+
+
 Java 8:
 1.  Support of functional programming (Lambda expression)
 2.  Introduction of default method and static method in interface
