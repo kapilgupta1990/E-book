@@ -4,4 +4,19 @@ Java 8:
 3.  Concepts of functional interface
 4.  Replacement of Permanent generation  Space with meta space
 5.  Improvement in Date and Time API :https://dzone.com/articles/deeper-look-java-8-date-and
-6. A java script run time which allows java script engine to be embedded inside java code
+6.  A java script run time which allows java script engine to be embedded inside java code
+
+
+Java 9:
+1. Introduction of JShell (An interactive way by which you can interect to Java Directly)
+2. Introduction of private methods inside interface
+3. Collection factory methods
+4. Improvement of HTTP calls
+5. Multirelease JARs and modular development
+
+Java 10
+1. Local variable type inference (Java 10 introduced var as a reserve type name to reduce verbosity)
+2. APIs for creating unmodifiable collection.
+                List.copyOf(), Set.copyOf()
+3. Removal of javah
+4. Paallel full GC for G1
