@@ -3,5 +3,5 @@ Java 8:
 2.  Introduction of default method and static method in interface
 3.  Concepts of functional interface
 4.  Replacement of Permanent generation  Space with meta space
-5.  Improvement in Date and Time API
+5.  Improvement in Date and Time API :https://dzone.com/articles/deeper-look-java-8-date-and
 6. A java script run time which allows java script engine to be embedded inside java code
