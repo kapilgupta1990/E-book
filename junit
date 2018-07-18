@@ -2,3 +2,14 @@
 If you are using the Maven build system, you should use the "Test" suffix for test classes.
 The Maven build system (via its surfire plug-in) automatically includes such classes in its test scope.
 
+
+Difference b/w Mock and Spy: 
+Mock : Create a mock object. Where you have to specify every thing
+Spy : Uses some real method and some proxy method.
+
+Mocking Framework:
+Mockito, Easy Mock , Power Mockito
+
+Mockito v/s Power Mockito:
+Mockito does not provide any support to test private method and static method , but there is support for the same inside 
+powerMockito.
