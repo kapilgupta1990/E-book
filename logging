@@ -1,0 +1,26 @@
+Logging Abstraction Layer:
+
+1. Simple Logging Facade for Java (SLF4J)
+   -- This is the abstraction layer.
+
+Note that SLF4J-enabling your library implies the addition of only a single mandatory dependency, namely slf4j-api.jar. If no binding is found on the class path, then SLF4J will default to a no-operation implementation.
+
+2. Apache Commons Logging (JCL) -> Jakarata common library
+
+JCL uses a runtime discovery algorithm that looks for a logging implementation in the classpath. Once an implementation found, a corresponding adapter is used to forward logging calls to that specific implementation. These adapters are nothing but the implementations of org.apache.commons.logging.Log (the main logging interface, as mentioned above). In JCL version 1.2 followings adapters are available:
+If no implementations of a logging framework is available then Jdk14Logger is used, which forwards logging messages to Java Util logging (JUL).
+
+Implementation:  Following implementations ara available for abstraction.
+Log4j -> Log4j.properties,log4j.xml
+Log4j2 -> log4j2.xml, log4j2.json, and log4j2.yaml
+Logback -> logback.xml, logback.groovy
+java.util.logging -> logging.properties
+SimpleLog- > Apache common its own implementation
+
+
+
+
+
+Lests say your project already is already using implementation directly like log4j/ logback, then there are librarires available like
+log4j over slf4j , log4j over common logging, that will delegate logging request to abstraction layer.
+   
